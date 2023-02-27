@@ -18,11 +18,13 @@
     border-radius: 2px;
 }
 .name {
+    height: auto;
     font-size: 32px;
     color: #ffffff;
     text-shadow: 2px 2px 5px #2b2a2a;
     background: #2b2a2a81;
     margin: 8px;
+    padding: 4px;
     border-radius: 1px;
     animation: rotateColorsText 1s infinite linear; 
 }
