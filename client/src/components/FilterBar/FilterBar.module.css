@@ -11,7 +11,6 @@
     justify-content: space-between;
     position: sticky;
     top: 23vh;
-    z-index: 10;
 }
 .select {
     font-family: 'Source Sans Pro', sans-serif;
@@ -120,6 +119,7 @@
         justify-content: center;
         align-items: center;
         background: #2b2a30ef;
+        z-index: 10;
         transition: 0.3s;
     }   
     .select{
