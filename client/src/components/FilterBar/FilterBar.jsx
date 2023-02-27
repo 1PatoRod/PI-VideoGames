@@ -51,7 +51,7 @@ const FilterBar = ({setCurrrentPage, setOrder}) => {
     };
 
     return(
-        <section>
+        <section className={style.sticky}>
             <input type='checkbox' id={style.check}/>
             <label className={style.menu}>
                 <div className={style.stick1}></div>

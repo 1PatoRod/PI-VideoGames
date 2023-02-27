@@ -1,10 +1,10 @@
 import Astronauta3 from '../../utils/Astronauta3.png'
 import SearchBar from '../SearchBar/SearchBar'
-import { Link } from "react-router-dom";
-import style from './NavBar.module.css';
+import { Link, useLocation } from "react-router-dom";import style from './NavBar.module.css';
 
 
 const NavBar = () => {
+    const location = useLocation()
     return (
         <section className={style.Container}>
             <Link to='/home' >
@@ -17,11 +17,11 @@ const NavBar = () => {
                 <div className={style.stick3}></div>
             </label>
             <ul className={style.LinkCont}>
-                <li>
-                    <Link to='/home' className={style.Link} >Home</Link>
+            <li>
+                    {location.pathname !== '/home' && <Link to='/home' className={style.Link} >Home</Link>}
                 </li>
                 <li>
-                    <Link to='/create' className={style.Link} >Create</Link>
+                    {location.pathname !== '/create' && <Link to='/create' className={style.Link} >Create</Link>}
                 </li>
             </ul>
             <h2 className={style.remplace} >.</h2>

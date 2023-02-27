@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { getVideoGameByName } from "../../redux/actions";
+import { useLocation } from "react-router-dom";
 import style from './SearchBar.module.css'
 
 const SearchBar = () => {
@@ -20,6 +21,11 @@ const SearchBar = () => {
         dispatch(getVideoGameByName(name))
         setName('');
     };
+
+    const location = useLocation()
+    if(location.pathname.startsWith('/detail/') || location.pathname === '/create'){
+        return (<div className={style.allCont} ></div>)
+    }
 
     return (
         <div className={style.allCont} >
