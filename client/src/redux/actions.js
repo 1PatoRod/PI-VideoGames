@@ -5,7 +5,7 @@ import axios from 'axios';
 //==============================================GET ALL VIDEOGAMES==============================================\\
 const getAllVideoGames = () => {
     return async function (dispatch) {
-        const apiData = await axios(`http://localhost:3001/videogames`);
+        const apiData = await axios(`/videogames`);
         const games = apiData.data;
         return dispatch({ type : GET_ALL_VIDEOGAMES, payload : games })
     }
@@ -14,7 +14,7 @@ const getAllVideoGames = () => {
 //===============================================GET GAME DETAIL===============================================\\
 const getVideoGameDetail = (id) => {
     return async function (dispatch) {
-        const apiData = await axios(`http://localhost:3001/videogames/${id}`);
+        const apiData = await axios(`/videogames/${id}`);
         const game = apiData.data;
         return dispatch({ type : GET_VIDEOGAME_DETAIL, payload : game });
     };
@@ -23,7 +23,7 @@ const getVideoGameDetail = (id) => {
 //============================================GET VIDEOGAME BY NAME============================================\\
 const getVideoGameByName = (name) => {
     return async function (dispatch) {
-        const apiData = await axios(`http://localhost:3001/videogames?name=${name}`);
+        const apiData = await axios(`/videogames?name=${name}`);
         const game = apiData.data
         return dispatch({ type : GET_VIDEOGAME_BY_NAME, payload : game });
     };
@@ -32,7 +32,7 @@ const getVideoGameByName = (name) => {
 //================================================GET ALL GENRES================================================\\
 const getAllGenres = () => {
     return async function (dispatch) {
-        const apiData = await axios(`http://localhost:3001/genres/genres`);
+        const apiData = await axios(`/genres/genres`);
         const genres = apiData.data;
         return dispatch({ type : GET_ALL_GENRES, payload : genres });
     };
@@ -168,7 +168,7 @@ const createVideoGame = (videogame) => {
         };
         console.log(game.platforms);
         console.log(game.genre)
-        const response = await axios.post('http://localhost:3001/videogames', game);
+        const response = await axios.post('/videogames', game);
         console.log(response)
         return response;
     }
