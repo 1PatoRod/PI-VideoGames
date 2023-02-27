@@ -49,7 +49,10 @@ const CardContainer = () => {
                             </section>
                         )
                     })}
-                    {!hasResults && <p className={style.found}>No games found in the main tray, try searching by name in the search bar...</p>}
+                    {!hasResults && <section className={style.found}>
+                        <div className={style.loader}></div>
+                        <p >No games found in the main tray, try searching by name in the search bar...</p>
+                    </section>}
                 </section>
             </section>
         </section>
