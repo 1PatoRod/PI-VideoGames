@@ -2,7 +2,7 @@ import './App.css';
 import { Route, useLocation } from "react-router-dom";
 import { Home, Landing, Form, Detail, NavBar } from './views/index'
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://pi-videogames-production-f356.up.railway.app/';
 
 function App() {
   const location = useLocation()
