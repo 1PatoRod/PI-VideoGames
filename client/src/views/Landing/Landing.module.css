@@ -1,0 +1,112 @@
+:root {
+	--primary-color: #3a4052;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Videophreak';
+}
+
+.Container {
+    height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	padding: 0 20px;
+	overflow: hidden;
+}
+.Video {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: var(--primary-color) url('https://youtu.be/T_QAxvPjjBc') no-repeat center
+		center/cover;
+}
+.Video video {
+    min-width: 100%;
+	min-height: 100%;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+.Video:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+
+.Content {
+    z-index: 2;
+}
+
+
+.btn {
+	display: inline-block;
+	padding: 10px 30px;
+	background: var(--primary-color);
+	color: #fff;
+	border-radius: 5px;
+	border: solid #fff 1px;
+	margin-top: 25px;
+	opacity: 0.7;
+	transition: 1s;
+}
+.btn:hover {
+	transition: 1s;
+	transform: scale(1.50);
+	background: #fff;
+	color: #3a4052;
+	border: solid #3a523b 1px;
+	cursor: pointer;
+}
+.tittle {
+	display: flex;
+	font-family: 'Videophreak';
+	font-weight: 300;
+	font-size: 150px;
+	line-height: 1.2;
+	margin-bottom: 15px;
+	text-shadow: 5px 5px 3px #3a4052;
+}
+
+.subTittle {
+	font-size: 30px;
+	text-shadow: 3px 4px 1px #3a4052;
+}
+@media (max-width: 768px) {
+	.tittle {
+		font-size: 50px;
+	}
+	.subTittle {
+		font-size: 18px;
+	}
+	.btn{
+		animation: zoom 3s infinite linear;
+	}
+	@keyframes zoom {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.3);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+}

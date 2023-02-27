@@ -1,0 +1,44 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 3px;
+    list-style: none;
+}
+.li {
+    width: 20px;
+    padding: 2px;
+    margin: 2px;
+    background-color: #2b2a30;
+    color: rgb(255, 255, 255);
+}
+.li:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #2b2a30;
+    animation: rotateColors 1s infinite linear; 
+    transition: 1s;
+}
+@keyframes rotateColors {
+    0% {
+        box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+    25% {
+        box-shadow: 4px 0px 5px #ee7c45, 0px -4px 5px #ff0034, -4px 0px 5px #03fda2, 0px 4px 5px #65f980;
+    }
+    50% {
+        box-shadow: 4px 0px 5px #00ffff, 0px -4px 5px #ee7c45, -4px 0px 5px #ff0034, 0px 4px 5px #03fda2;
+    }
+    75% {
+        box-shadow: 4px 0px 5px #ddf456, 0px -4px 5px #00ffff, -4px 0px 5px #ee7c45, 0px 4px 5px #ff0000;
+    }
+    100% {
+        box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+}

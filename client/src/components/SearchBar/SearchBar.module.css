@@ -1,0 +1,77 @@
+.allCont {
+    display: flex;
+    flex-direction: row;
+    width: 24vw;
+    height: 40px;
+    color: #ffffff;
+}
+.SearchBar {
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    background: #2b2a30;
+    font-family: 'Source Sans Pro', sans-serif;
+    border: solid #ffffff 1px;
+    border-right: none;
+    font-size: 100%;
+    outline: #2b2a30;
+    transition: 1s;
+}
+.button {
+    background: #2b2a30;
+    color: #ffffff;
+    width: 8vw;
+    font-family: 'Source Sans Pro', sans-serif;
+    border: solid #ffffff 1px;
+    border-left: none;
+    text-justify: center;
+    text-align: center;
+    transition: 1s;
+}
+.SearchBar:hover, .SearchBar:focus {
+    background: #ffffff;
+    color: #2b2a30;
+    border: none;
+    animation: rotateColors 1s infinite linear;
+    transition: 1s;
+}
+.button:hover {
+    background: #ffffff;
+    color: #2b2a30;
+    animation: rotateColors 1s infinite linear;
+    transition: 1s;
+}
+
+
+@keyframes rotateColors {
+    0% {
+        box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+    25% {
+        box-shadow: 4px 0px 5px #ee7c45, 0px -4px 5px #ff0034, -4px 0px 5px #03fda2, 0px 4px 5px #65f980;
+    }
+    50% {
+        box-shadow: 4px 0px 5px #00ffff, 0px -4px 5px #ee7c45, -4px 0px 5px #ff0034, 0px 4px 5px #03fda2;
+    }
+    75% {
+        box-shadow: 4px 0px 5px #ddf456, 0px -4px 5px #00ffff, -4px 0px 5px #ee7c45, 0px 4px 5px #ff0000;
+    }
+    100% {
+        box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+}
+@media (max-width: 678px) {
+    .allCont{
+        position: fixed;
+        left: 100%;
+        width: 75vw;
+        top: 80px;
+    }
+    .button {
+        width: 60px;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+        border-left: solid #ffffff33 1px;
+    }
+}

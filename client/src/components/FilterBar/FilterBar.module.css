@@ -1,0 +1,198 @@
+.AllBar {
+    display: flex;
+    flex-direction: column;
+    background: #2b2a30;
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 500px;
+    width: 200px;
+    margin: 5px;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 23vh;
+    z-index: 10;
+}
+.select {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 180px;
+    height: 50px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 1px;
+    border: solid 1px #ffffff;
+    background-color: #2b2a30;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    outline: none;
+    transition: 1s;
+}
+.option {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.select:hover {
+    background-color: #ddd;
+    animation: rotateColors 1s infinite linear; 
+    color: #2b2a30;
+    transition: 1s;
+}
+
+.select:focus {
+    background-color: #ddd;
+    animation: rotateColors 1s infinite linear; 
+    color: #2b2a30;
+}
+
+@keyframes rotateColors {
+    0% {
+        box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+    25% {
+        box-shadow: 4px 0px 5px #ee7c45, 0px -4px 5px #ff0034, -4px 0px 5px #03fda2, 0px 4px 5px #65f980;
+    }
+    50% {
+        box-shadow: 4px 0px 5px #00ffff, 0px -4px 5px #ee7c45, -4px 0px 5px #ff0034, 0px 4px 5px #03fda2;
+    }
+    75% {
+        box-shadow: 4px 0px 5px #ddf456, 0px -4px 5px #00ffff, -4px 0px 5px #ee7c45, 0px 4px 5px #ff0000;
+    }
+    100% {
+        box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+}
+.iconCont {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    justify-content: center;
+    padding: 3px;
+    margin: 3px;
+}
+.icon {
+    height: 40px;
+    width: 40px;
+    margin: 3px;
+    padding: 3px;
+    transition: 1s;
+}
+.icon:hover {
+    transform: scale(1.4);
+    transition: 1s;
+}
+.text {
+    color: #ffffff;
+    animation: rotateColorsText 1s infinite linear; 
+}
+.menu {
+    display: none;
+    z-index: 10;
+}
+#check {
+    display: none;
+    z-index: 11;
+}
+@keyframes rotateColorsText {
+    0% {
+        text-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+    25% {
+        text-shadow: 4px 0px 5px #ee7c45, 0px -4px 5px #ff0034, -4px 0px 5px #03fda2, 0px 4px 5px #65f980;
+    }
+    50% {
+        text-shadow: 4px 0px 5px #00ffff, 0px -4px 5px #ee7c45, -4px 0px 5px #ff0034, 0px 4px 5px #03fda2;
+    }
+    75% {
+        text-shadow: 4px 0px 5px #ddf456, 0px -4px 5px #00ffff, -4px 0px 5px #ee7c45, 0px 4px 5px #ff0000;
+    }
+    100% {
+        text-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+}
+@media (max-width: 678px) {
+    .AllBar{
+        position: fixed;
+        left: 9%;
+        top: 100%;
+        width: 80vw;
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+        background: #2b2a30ef;
+        transition: 0.3s;
+    }   
+    .select{
+        height: 40px;
+        width: 75vw;
+    }
+    .FilterBar{
+        border: solid #ffffff 1px;
+    }
+    .menu {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        width: 35px;
+        height: 30px;
+        background: #dcf45600;
+        left: 2px;
+        top: 8vh;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3px;
+        transition: 0.3s;
+    }
+    .stick1 {
+        background: #ffffff;
+        width: 90%;
+        height: 20%;
+        border-radius: 3px;
+        transform: rotate(120deg) translateY(1px) translateX(8px);
+        transition: 0.3s;
+    }
+    .stick2 {
+        background: #ffffff;
+        width: 90%;
+        height: 20%;
+        border-radius: 3px;
+        transform: rotate(-120deg) translateY(7px) translateX(-1px);
+        transition: 0.3s;
+    }
+    .stick3 {
+        background: #ffffff;
+        width: 90%;
+        height: 20%;
+        border-radius: 3px;
+        transform:translateY(-2px);
+        transition: 0.3s;
+    }
+    #check {
+        display: flex;
+        position: fixed;
+        left: 2px;
+        top: 8vh;
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+        z-index: 12;
+    }
+    #check:checked ~ .AllBar {
+        top: 28%;
+        left: 9%;
+        transition: 0.6s;
+    }
+    #check:checked ~ .menu > .stick1 {
+        transform: rotate(120deg) translateY(-9px) translateX(3px);
+        transition: 0.6s;
+    }
+    #check:checked ~ .menu > .stick2 {
+        transform: rotate(-120deg) translateY(-3px) translateX(5px);
+        transition: 0.6s;
+    }
+    #check:checked ~ .menu > .stick3 {
+        transform: translateY(-22px);
+        transition: 0.6s;
+    }
+
+}

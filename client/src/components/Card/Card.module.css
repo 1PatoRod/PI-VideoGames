@@ -1,0 +1,115 @@
+.Card {
+    background: #2b2a3000;
+    display: inline-block;
+    margin: 8px;
+    max-width: 300px;
+    height: 300px;
+    perspective: 1000;
+    position: relative;
+    text-align: left;
+    transition: all 0.5s ease-in;
+    width: 300px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.img {
+    width: 300px;
+    max-height: 200px;
+    filter: brightness(50%);
+}
+.imgCont {
+    max-width: 100%;
+    overflow: hidden;
+}
+.Name {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-rendering: optimizeLegibility;
+    color: #ffffff;
+    padding: 5px;
+    top: 100%;
+} 
+.Genres {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-rendering: optimizeLegibility;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.Card:hover .Name{
+    font-family: 'Videophreak';
+    color: #2b2a2a;
+}
+.Card:hover .Genres {
+    color: #2b2a2a;
+}
+.Card:hover .img {
+    filter: brightness(100%);
+    transform: scale(1.06);
+    transition: 0.7s;
+}
+
+.Card:hover {
+    transform: scale(1.05);
+    background: #ffffff;
+}
+
+.Card:hover {
+    animation: rotateColors 1s infinite linear; 
+}
+@keyframes rotateColors {
+    0% {
+        box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+    25% {
+        box-shadow: 4px 0px 5px #ee7c45, 0px -4px 5px #ff0034, -4px 0px 5px #03fda2, 0px 4px 5px #65f980;
+    }
+    50% {
+        box-shadow: 4px 0px 5px #00ffff, 0px -4px 5px #ee7c45, -4px 0px 5px #ff0034, 0px 4px 5px #03fda2;
+    }
+    75% {
+        box-shadow: 4px 0px 5px #ddf456, 0px -4px 5px #00ffff, -4px 0px 5px #ee7c45, 0px 4px 5px #ff0000;
+    }
+    100% {
+        box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+}
+
+@media (max-width: 678px) {
+    .Card {
+        background: #2b2a3000;
+        display: inline-block;
+        margin: 8px;
+        max-width: 300px;
+        height: 300px;
+        perspective: 1000;
+        position: relative;
+        text-align: left;
+        transition: all 0.5s ease-in;
+        width: 300px;
+        border-radius: 2px;
+        border-bottom: solid #2b2a2a 1px;
+        overflow: hidden;
+    }
+    .img {
+        width: 300px;
+        max-height: 200px;
+        filter: brightness(50%);
+    }
+    .imgCont {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .Name {
+        font-family: 'Source Sans Pro', sans-serif;
+        text-rendering: optimizeLegibility;
+        color: #ffffff;
+        padding: 5px;
+        top: 100%;
+    } 
+    .Genres {
+        font-family: 'Source Sans Pro', sans-serif;
+        text-rendering: optimizeLegibility;
+        color: #ffffff;
+        padding: 5px;
+    }
+}

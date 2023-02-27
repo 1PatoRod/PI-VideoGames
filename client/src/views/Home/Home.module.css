@@ -1,0 +1,74 @@
+* {
+    font-family: 'Videophreak';
+}
+.Cotainer{
+    display: flex;
+    justify-content: left;
+}
+.found {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('https://www.xtrafondos.com/wallpapers/astronauta-entre-humo-de-colores-6222.jpgS');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: fixed;
+    overflow:scroll;
+    z-index: -1;
+}
+.tray {
+    background: #151322a8;
+}
+.button {
+    width: 8vw;
+    background: #2b2a30;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    border: solid #ffffff 1px;
+    border-top: none;
+    padding: 8px;
+    justify-content: right;
+    transition: 1s;
+    cursor: pointer;
+}
+.button:hover {
+    transform: scale(1.1);
+    background-color: #ddd;
+    animation: rotateColors 1s infinite linear; 
+    color: #2b2a30;
+    font-family: 'Videophreak';
+    transition: 1s;
+}
+@keyframes rotateColors {
+    0% {
+        box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+    25% {
+        box-shadow: 4px 0px 5px #ee7c45, 0px -4px 5px #ff0034, -4px 0px 5px #03fda2, 0px 4px 5px #65f980;
+    }
+    50% {
+        box-shadow: 4px 0px 5px #00ffff, 0px -4px 5px #ee7c45, -4px 0px 5px #ff0034, 0px 4px 5px #03fda2;
+    }
+    75% {
+        box-shadow: 4px 0px 5px #ddf456, 0px -4px 5px #00ffff, -4px 0px 5px #ee7c45, 0px 4px 5px #ff0000;
+    }
+    100% {
+        box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+}
+@media (max-width: 678px) {
+    .found {
+        height: 100%;
+        width: 250%;
+    }
+    .tray {
+        background: #151322a8;
+    }
+    .button{
+        width: 100px;
+    }
+}

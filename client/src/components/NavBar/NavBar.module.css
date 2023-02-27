@@ -1,0 +1,205 @@
+.Container {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    background: #2b2a30;
+    z-index: 10;
+}
+.img {
+    height: 40px;
+    margin-top: 2px;
+    border-radius: 1px;
+    transition: 0.6s;
+}
+.imgRes {
+    height: 40px;
+    margin-top: 2px;
+    border-radius: 1px;
+    opacity: 0;
+}
+.img:hover{
+    transform: scale(1.2);
+    transition: 0.6s;
+}
+.LinkCont {
+    display: flex;
+    flex-direction: row;
+}
+.Link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    border: solid #ffffff 1px;
+    padding: 11px;
+    margin: 5px;
+    transition: 1s;
+}
+.Link:hover, .Link:focus {
+    background-color: #ddd;
+    animation: rotateColors 1s infinite linear; 
+    color: #2b2a30;
+    transition: 1s;
+}
+.remplace{
+    font-size: 30px;
+    width: 350px;
+    color: #ffffff;
+    border: solid #2b2a30 1px; 
+    opacity: 0;
+}
+.tittle {
+    position: absolute;
+    font-size: 30px;
+    width: 350px;
+    color: #ffffff;
+    animation: rotateColorsText 1s infinite linear; 
+}
+li {
+    text-decoration: none;
+    list-style: none;
+}
+.menu {
+    display: none;
+}
+#check{
+    display: none;
+}
+#SearchBar {
+    position: fixed;
+    left: 100%;
+}
+@keyframes rotateColors {
+    0% {
+        box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+    25% {
+        box-shadow: 4px 0px 5px #ee7c45, 0px -4px 5px #ff0034, -4px 0px 5px #03fda2, 0px 4px 5px #65f980;
+    }
+    50% {
+        box-shadow: 4px 0px 5px #00ffff, 0px -4px 5px #ee7c45, -4px 0px 5px #ff0034, 0px 4px 5px #03fda2;
+    }
+    75% {
+        box-shadow: 4px 0px 5px #ddf456, 0px -4px 5px #00ffff, -4px 0px 5px #ee7c45, 0px 4px 5px #ff0000;
+    }
+    100% {
+        box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+}
+@keyframes rotateColorsText {
+    0% {
+        text-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+    25% {
+        text-shadow: 4px 0px 5px #ee7c45, 0px -4px 5px #ff0034, -4px 0px 5px #03fda2, 0px 4px 5px #65f980;
+    }
+    50% {
+        text-shadow: 4px 0px 5px #00ffff, 0px -4px 5px #ee7c45, -4px 0px 5px #ff0034, 0px 4px 5px #03fda2;
+    }
+    75% {
+        text-shadow: 4px 0px 5px #ddf456, 0px -4px 5px #00ffff, -4px 0px 5px #ee7c45, 0px 4px 5px #ff0000;
+    }
+    100% {
+        text-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+}
+
+@media (max-width: 678px) {
+    .tittle{
+        width: 200px;
+    }
+    .LinkCont {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 100%;
+        top: 6vh;
+        background: #2b2a30ef;
+        width: 80vw;
+        height: 25vh;
+        align-items: center;
+        padding-top: 20%;
+        overflow: hidden;
+        transition: .3s;
+    }
+    .Link {
+        width: 75vw;
+        transition: 0.3s;
+    }
+    div {
+        transition: 0.3s;
+    }
+    .menu {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 35px;
+        height: 25px;
+        background: #dcf45600;
+        left: 75%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3px;
+    }
+    .stick1 {
+        background: #ffffff;
+        width: 90%;
+        height: 20%;
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .stick2 {
+        background: #ffffff;
+        width: 90%;
+        height: 20%;
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .stick3 {
+        background: #ffffff;
+        width: 90%;
+        height: 20%;
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    #check {
+        display: flex;
+        position: fixed;
+        left: 86%;
+        width: 25px;
+        height: 20px;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    #check:checked ~ ul {
+        left: 10.2%;
+        transition: 0.6s;
+    }
+    #check:checked ~ div {
+        top: 10vh;
+        left: 12.5%;
+        transition: 0.6s;
+    }
+    #check:checked ~ .menu > .stick1 {
+        transform: rotate(45deg) translateY(5px) translateX(5px);
+        transition: 0.6s;
+    }
+    #check:checked ~ .menu > .stick2 {
+        opacity: 0;
+        transition: 0.6s;
+    }
+    #check:checked ~ .menu > .stick3 {
+        transform: rotate(-45deg) translateY(-6px) translateX(5.5px);
+        transition: 0.6s;
+    }
+    
+}

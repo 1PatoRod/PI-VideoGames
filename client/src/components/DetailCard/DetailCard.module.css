@@ -1,0 +1,97 @@
+.Cont {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    width: 90vw;
+    height: 80vh;
+    background: #2b2a2a00;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 5px;
+    margin: 10px;
+}
+.img{
+    max-height: 100%;
+    max-width: 60%;
+    margin: 5px;
+    border-radius: 2px;
+}
+.name {
+    font-size: 32px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px #2b2a2a;
+    background: #2b2a2a81;
+    margin: 8px;
+    border-radius: 1px;
+    animation: rotateColorsText 1s infinite linear; 
+}
+@keyframes rotateColorsText {
+    0% {
+        text-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+    25% {
+        text-shadow: 4px 0px 5px #ee7c45, 0px -4px 5px #ff0034, -4px 0px 5px #03fda2, 0px 4px 5px #65f980;
+    }
+    50% {
+        text-shadow: 4px 0px 5px #00ffff, 0px -4px 5px #ee7c45, -4px 0px 5px #ff0034, 0px 4px 5px #03fda2;
+    }
+    75% {
+        text-shadow: 4px 0px 5px #ddf456, 0px -4px 5px #00ffff, -4px 0px 5px #ee7c45, 0px 4px 5px #ff0000;
+    }
+    100% {
+        text-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
+    }
+}
+.id, .genre, .platforms, .relaseDate, .rating {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px #2b2a2a;
+    background: #2b2a2a81;
+    margin: 4px;
+    border-radius: 1px;
+}
+.description {
+    max-height: 500px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 5px;
+    margin: 5px;
+    color: #777676;
+    background: #2b2a2a;
+    overflow: auto;
+    overflow-x: hidden;
+    transition: 1s;
+}
+
+.description:hover {
+    background: #ddebac88;
+    color: #2b2a2a;
+    scrollbar-color: #2b2a2a;
+    transition: 0.6s;
+
+}
+@media (max-width: 678px) {
+    .Cont {
+        flex-direction: column;
+    }
+    .description {
+        max-height: 150px;
+        border-radius: 1px;
+    }
+    .img {
+        max-width: 100%;
+        max-height: none;
+    }
+    .id, .genre, .platforms, .relaseDate, .rating {
+        background: #2b2a2a81;
+        margin: 4px;
+        border-radius: 1px;
+        font-size: 16px;
+    }
+    .name {
+        background: #2b2a2a81;
+        margin: 5px;
+        border-radius: 1px;
+    }
+}

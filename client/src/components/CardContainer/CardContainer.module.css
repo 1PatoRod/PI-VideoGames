@@ -1,0 +1,38 @@
+* {
+    font-family: 'Videophreak';
+}
+.allCont {
+    background: #2b2a3000;
+}
+.Container{
+    display: flex;
+}
+.CardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px;
+    background: #2b2a3000;
+    min-height: 87vh;
+    overflow: hidden;
+}
+.Paged {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.FilterBar {
+    position: absolute;
+    z-index: 1;
+}
+.found {
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    border-radius: 100%;
+}
+
+
