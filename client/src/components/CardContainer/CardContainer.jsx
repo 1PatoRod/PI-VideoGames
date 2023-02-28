@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import Card from "../Card/Card";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Paged from '../paged/Paged'
 import FilterBar from "../FilterBar/FilterBar";
 import style from './CardContainer.module.css';
@@ -20,6 +20,10 @@ const CardContainer = () => {
     const paged = (pageNumber) => {
         setCurrrentPage(pageNumber);
     }
+
+    useEffect(() => {
+        setCurrrentPage(1);
+    }, [videoGames]);
 
     let hasResults = true;
     if (videoGames.length === 0) {
