@@ -25,12 +25,6 @@ body {
     animation: rotateColors 1s infinite linear; 
     transition: 1s;
 }
-.li:active {
-    background-color: #ffffff;
-    color: #2b2a30;
-    animation: rotateColors 1s infinite linear; 
-    transition: 1s;
-}
 @keyframes rotateColors {
     0% {
         box-shadow: 4px 0px 5px #ff0034, 0px -4px 5px #03fda2, -4px 0px 5px #65f980, 0px 4px 5px #ff0034;
