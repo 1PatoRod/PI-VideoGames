@@ -38,15 +38,12 @@ const getGenresHandler = async (req, res) => {
 
 const postVideoGamesHandler = async (req, res) => {
     try{
-        // const { name, description, platforms, image, relaseDate, rating, genre } = req.body;
         const videoGameBody = req.body;
         const videoGame = await postVideoGames(videoGameBody);
-
         res.status(200).json(videoGame)
     } catch ( error ) {
         res.status( 400 ).json( { error : error.message } );
     }
 };
-
 
 module.exports = { getAllVideoGamesHandler, getVideoGameDetailHandler, getGenresHandler, postVideoGamesHandler };
