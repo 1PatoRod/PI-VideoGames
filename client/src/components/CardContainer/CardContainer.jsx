@@ -32,7 +32,7 @@ const CardContainer = () => {
 
     return (
         <section className={style.allCont}>
-                    <Paged cardPege={cardPege} videoGames={videoGames.length} paged={paged} classname={style.Paged} />
+                    <Paged cardPege={cardPege} videoGames={videoGames.length} paged={paged} classname={style.Paged} setCurrrentPage={setCurrrentPage} currentPage={currentPage} />
             <section className={style.Container} >
                     <div className={style.FilterContainer} >
                     <FilterBar setCurrrentPage={setCurrrentPage} setOrder={setOrder} className={style.FilterBar}/>

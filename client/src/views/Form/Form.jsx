@@ -62,7 +62,6 @@ const Form = () => {
             // const eventProperty = event.target.name;
             const eventValue = event.target.value;
             const deleteGenre = form.genres?.filter(genre => genre !== eventValue.toString())
-
             validate({ ...form, genres : deleteGenre})
             setForm({ ...form, genres : deleteGenre});
         };
@@ -74,24 +73,19 @@ const Form = () => {
             alert(`The vieogame: ${form.name}, has been successfully created`);
             history.push('/home');
         }
-
-        let currentDate = new Date();
         
         const validate = (form) => {
-
-
             setErrors(prevErrors => ({
                 ...prevErrors,
                 name: !form.name.length ? 'Complete the name section' : form.name.length <= 1 ? 'The name must be greater than 1 letters' : '',
                 description: !form.description.length ? 'Complete the description section' : form.description.length < 20 ? 'The description must be greater than 20 letters' : '',
                 platforms: !form.platforms.length ? 'Complete the platforms section' : '',
-                relaseDate: !form.relaseDate.length ? 'Complete the Release Date section' :form.relaseDate > currentDate ? 'The date cannot be higher than the current one' : '',
-                rating: !form.rating.length ? 'Complete the Punctuation section' : form.rating > 5 ? 'The Punctuation cannot exceed 5' : form.rating === 'error' ? 'Complete the Punctuation section' : '',
+                relaseDate: !form.relaseDate.length ? 'Complete the Release Date section' : '',
+                rating: !form.rating.length ? 'Complete the Punctuation section' : form.rating > 5 ? 'The Punctuation cannot exceed 5' : form.rating < 0 ? 'The score cannot be less than 0' : form.rating === 'error' ? 'Complete the Punctuation section' : '',
                 genres: !form.genres.length ? 'Complete the genres section' : form.genres.length >= 6 ? 'A game cannot have more than 5 genres': form.genres === [] ? 'Complete the genres section' : '',
             }));
         };
 
-        console.log(form.genres);
     return (
         <form onSubmit={e=>submitHandler(e)} className={style.form} >
             <img src='https://images4.alphacoders.com/107/1074462.jpg' alt='Found image' className={style.found}/>
@@ -124,15 +118,7 @@ const Form = () => {
                     </section>
                     <section className={style.section} >
                         <div>
-                            <select value={form.rating} onChange={e => changeHandler(e)} name='rating' className={style.select} >
-                                <option value='error'>Punctuation</option>
-                                <option value='0' className={style.select} >0</option>
-                                <option value='1' className={style.select} >1</option>
-                                <option value='2' className={style.select} >2</option>
-                                <option value='3' className={style.select} >3</option>
-                                <option value='4' className={style.select} >4</option>
-                                <option value='5' className={style.select} >5</option>
-                            </select>
+                            <input type='number' value={form.rating} onChange={e => changeHandler(e)} name='rating' className={style.select} placeHolder='Punctuation' />
                         </div>
                         {errors.rating && <span className={style.warning} >{errors.rating}</span>}
                     </section>

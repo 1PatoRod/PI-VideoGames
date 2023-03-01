@@ -16,9 +16,26 @@ body {
     padding: 2px;
     margin: 2px;
     background-color: #2b2a30;
-    color: rgb(255, 255, 255);
+    color: #ffffffff;
 }
-.li:hover {
+.button {
+    height: 25px;
+    padding: 2px;
+    margin: 2px;
+    background-color: #2b2a30;
+    color: #ffffffff;
+    border: none;
+    justify-content: center;
+    text-align: center;
+}
+.liSelect {
+    width: 20px;
+    padding: 2px;
+    margin: 2px;
+    background-color: #ffffff;
+    color: #2b2a30;
+}
+.li:hover , .button:hover {
     cursor: pointer;
     background-color: #ffffff;
     color: #2b2a30;
