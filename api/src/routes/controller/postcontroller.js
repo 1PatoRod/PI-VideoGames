@@ -1,4 +1,5 @@
 const  { Videogame } = require('../../db');
+const AstronautaFondo = require('../../assets/AstronautaFondo.jpg')
 
 
 const postVideoGames = async (videoGame) => {
@@ -6,6 +7,7 @@ const postVideoGames = async (videoGame) => {
         const { name, description, platforms, image, relaseDate, rating, genre } = videoGame;
 
         if(!name || !description || !platforms || !relaseDate || !rating || !genre ) throw Error ('The params are not complete')
+        if(!image) image = AstronautaFondo;
         
         const newVideoGame = { name, description, platforms, image, relaseDate, rating };
 
