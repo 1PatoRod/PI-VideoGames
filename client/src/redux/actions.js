@@ -1,6 +1,7 @@
 //======================================IMPORT THE ACTIONS TYPES REQUIRED======================================\\
 import { GET_ALL_VIDEOGAMES, GET_VIDEOGAME_DETAIL, GET_VIDEOGAME_BY_NAME, GET_ALL_GENRES, CLEAR_DETAIL, CLEAR_VIDEOGAMES, CLEAR_GENRES, FILTER_BY_GENRE, FILTER_BY_ORIGIN, FILTER_BY_DIRECTION, FILTER_BY_ALPHABETIC, FILTER_BY_RATING } from './actionsTypes';
 import axios from 'axios';
+import AstronautaFondo from '../assets/AstronautaFondo.jpg';
 
 //==============================================GET ALL VIDEOGAMES==============================================\\
 const getAllVideoGames = () => {
@@ -161,7 +162,7 @@ const createVideoGame = (videogame) => {
             name: name,
             description: description,
             platforms: [platforms],
-            image: image,
+            image: image ? image : AstronautaFondo,
             relaseDate: relaseDate,
             rating: rating,
             genre: genres?.map(genre => parseInt(genre)),
