@@ -1,4 +1,4 @@
-import { GET_ALL_VIDEOGAMES, GET_VIDEOGAME_DETAIL, GET_VIDEOGAME_BY_NAME, GET_ALL_GENRES, CLEAR_DETAIL, CLEAR_VIDEOGAMES, CLEAR_GENRES, FILTER_BY_GENRE, FILTER_BY_ORIGIN, FILTER_BY_DIRECTION, FILTER_BY_ALPHABETIC, FILTER_BY_RATING, CREATE_VIDEOGAME } from './actionsTypes';
+import { GET_ALL_VIDEOGAMES, GET_VIDEOGAME_DETAIL, GET_VIDEOGAME_BY_NAME, GET_ALL_GENRES, CLEAR_DETAIL, CLEAR_VIDEOGAMES, CLEAR_GENRES, APPLY_FILTERS, CREATE_VIDEOGAME } from './actionsTypes';
 
 const initialState = {
     videoGames : [],
@@ -32,19 +32,7 @@ const rootReducer = ( state = initialState, action ) => {
         case CLEAR_GENRES:
             return { ...state,
                     genres : [] };
-        case FILTER_BY_GENRE:
-            return { ...state,
-                filterVideoGames : action.payload };
-        case FILTER_BY_ORIGIN:
-            return { ...state,
-                filterVideoGames : action.payload };
-        case FILTER_BY_DIRECTION:
-            return { ...state,
-                filterVideoGames : action.payload };
-        case FILTER_BY_ALPHABETIC:
-            return { ...state,
-                filterVideoGames : action.payload };
-        case FILTER_BY_RATING:
+        case APPLY_FILTERS: 
             return { ...state,
                 filterVideoGames : action.payload };
         case CREATE_VIDEOGAME:
