@@ -81,7 +81,8 @@ const filterByGenre = (genreId, AllVideoGames) => {
         );
         return filteredVideoGames;
     };
-    return AllVideoGames;
+    const filteredVideoGames = AllVideoGames;
+    return filteredVideoGames;
 };
 
 const filterByOrigin = (origin, filterGenre) => {
@@ -97,7 +98,8 @@ const filterByOrigin = (origin, filterGenre) => {
             return filteredVideoGames;
         }
     }
-    return filterGenre;
+    const filteredVideoGames = filterGenre;
+    return filteredVideoGames;
     
 };
 //--------------------------------FILTRAR POR DIRECTION, ALPHABETIC Y RATING--------------------------------\\
@@ -116,7 +118,8 @@ const filterByDirectional = (direcDir, filterOrigin) => {
         });
         return sortFilter
     }
-    return filterOrigin;
+    const filteredVideoGames = filterOrigin;
+    return filteredVideoGames;
 };
 
 const filterBYAlphabetical = (direcAlph, filterDirectional) => {
@@ -133,7 +136,8 @@ const filterBYAlphabetical = (direcAlph, filterDirectional) => {
         });
         return sortFilter;
     }
-    return filterDirectional;
+    const filteredVideoGames = filterDirectional;
+    return filteredVideoGames;
 };
 
 const filterByRating = (direcRating, filterAlphabetic) => {
@@ -150,8 +154,8 @@ const filterByRating = (direcRating, filterAlphabetic) => {
             });
             return sortFilter;
         }
-        return filterAlphabetic;
-
+        const filteredVideoGames = filterAlphabetic;
+        return filteredVideoGames;
 };
 
 //=============================================CREATE VIDEOGAME=============================================\\
