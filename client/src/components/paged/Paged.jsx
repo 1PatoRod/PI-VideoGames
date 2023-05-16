@@ -17,7 +17,6 @@ const Paged = ({ cardPege, videoGames, paged, setCurrrentPage, currentPage }) =>
         setCurrrentPage( prev ):
         setCurrrentPage( next )
     }
-    console.log(prev, next)
     return(
         <nav>
             <ul className={style.ul} >

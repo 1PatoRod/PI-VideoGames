@@ -88,10 +88,12 @@ const filterByOrigin = (origin, filterGenre) => {
     if (origin !== 'Origin All'){
         if(origin === 'DB'){
             const filteredVideoGames = filterGenre.filter( videogame => videogame.hasOwnProperty('createdInDb'))//comprueba que exista createdInDb en el videojuego.
+            console.log('Origin', filteredVideoGames);
             return filteredVideoGames;
         }
         if(origin === 'API'){
             const filteredVideoGames = filterGenre.filter( videogame => !videogame.hasOwnProperty('createdInDb'))//comprueba que exista createdInDb en el videojuego.
+            console.log('Origin API', filteredVideoGames);
             return filteredVideoGames;
         }
     }
